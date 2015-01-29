@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<HTML STYLE = "height: 100%;">
+	<HEAD>
+		<META NAME = "viewport" CONTENT = "initial-scale=1.0, user-scalable = yes"/>
+		<META HTTP-EQUIV = "content-type" CONTENT = "text/html; charset = UTF-8;"/>
+		
+		<SCRIPT TYPE = "text/javascript"
+			SRC = "http://maps.google.com/maps/api/js?sensor=false"></SCRIPT>
+		
+		<SCRIPT TYPE = "text/javascript">
+			
+		/*
+		This JavaScript function is called by the webViewDidFinishLoad: method of the
+		UIWebViewDelegate.
+		*/
+		
+		function showmap(latitude, longitude, zoom) {
+/*
+			alert('showmap(' +
+				latitude + ', ' +
+				longitude + ', ' +
+				zoom + ')');
+*/
+			var division = document.getElementById("mapDivision");
+			if (division == null) {
+				alert("mapDivision not found");
+				return;
+			}
+
+			var position = new google.maps.LatLng(latitude, longitude);
+
+			var options = {
+				center: position,
+				mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DROPDOWN_MENU},
+				mapTypeId: google.maps.MapTypeId.HYBRID,	//or ROADMAP, SATELLITE, TERRAIN
+				scaleControl: true,
+				tilt: 0,	//vs. 45 degrees
+				zoom: zoom
+			};
+			var map = new google.maps.Map(division, options);
+
+/*
+			options = {
+				position: position,
+				map: map,
+				title: "163 William Street"	//doesn't appear on iPhone simulator
+			};
+			var marker = new google.maps.Marker(options);
+*/
+
+			
+/*
+			options = {
+				content:
+				"<B>163 William Street</B>"
+				+ "<BR>" + Math.abs(latitude)  + "&deg;&nbsp;" + (latitude  >= 0 ? "N" : "S")
+				+ "<BR>" + Math.abs(longitude) + "&deg;&nbsp;" + (longitude >= 0 ? "E" : "W"),
+				position: position
+			};
+			var infowindow = new google.maps.InfoWindow(options);
+			infowindow.open(map);
+*/
+
+			return 12345;
+		}
+		</SCRIPT>
+	</HEAD>
+	
+	<BODY STYLE = "height: 100%; margin: 0px;">
+		<DIV ID = "mapDivision" STYLE = "height: 100%;"></DIV>
+	</BODY>
+</HTML>

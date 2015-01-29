@@ -7,12 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF0773131A72AD31001BEA5E /* GoogleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0773121A72AD31001BEA5E /* GoogleController.swift */; };
+		AF0773151A72AD50001BEA5E /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0773141A72AD50001BEA5E /* MapController.swift */; };
+		AF0773191A72B0F4001BEA5E /* javascript.html in Resources */ = {isa = PBXBuildFile; fileRef = AF0773181A72B0F4001BEA5E /* javascript.html */; };
+		AF07731B1A72B41C001BEA5E /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF07731A1A72B41C001BEA5E /* WebView.swift */; };
+		AF07731F1A72DC4B001BEA5E /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF07731E1A72DC4B001BEA5E /* Pin.swift */; };
+		AF0773211A72E468001BEA5E /* edited.txt in Resources */ = {isa = PBXBuildFile; fileRef = AF0773201A72E468001BEA5E /* edited.txt */; };
 		AFB8427B1A72A0E000DFF4CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB8427A1A72A0E000DFF4CA /* AppDelegate.swift */; };
-		AFB8427D1A72A0E000DFF4CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB8427C1A72A0E000DFF4CA /* ViewController.swift */; };
 		AFB842801A72A0E000DFF4CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFB8427E1A72A0E000DFF4CA /* Main.storyboard */; };
 		AFB842821A72A0E000DFF4CA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFB842811A72A0E000DFF4CA /* Images.xcassets */; };
 		AFB842851A72A0E000DFF4CA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFB842831A72A0E000DFF4CA /* LaunchScreen.xib */; };
 		AFB842911A72A0E000DFF4CA /* _MapsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB842901A72A0E000DFF4CA /* _MapsTests.swift */; };
+		AFB8429B1A72A14E00DFF4CA /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB8429A1A72A14E00DFF4CA /* MainController.swift */; };
+		AFB8429D1A72A22600DFF4CA /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB8429C1A72A22600DFF4CA /* Buttons.swift */; };
+		AFB8429F1A72A24100DFF4CA /* ButtonsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB8429E1A72A24100DFF4CA /* ButtonsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,16 +34,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF0773121A72AD31001BEA5E /* GoogleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleController.swift; sourceTree = "<group>"; };
+		AF0773141A72AD50001BEA5E /* MapController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
+		AF0773181A72B0F4001BEA5E /* javascript.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = javascript.html; sourceTree = "<group>"; };
+		AF07731A1A72B41C001BEA5E /* WebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		AF07731E1A72DC4B001BEA5E /* Pin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pin.swift; sourceTree = "<group>"; };
+		AF0773201A72E468001BEA5E /* edited.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = edited.txt; sourceTree = "<group>"; };
 		AFB842751A72A0E000DFF4CA /* 2Maps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 2Maps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFB842791A72A0E000DFF4CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFB8427A1A72A0E000DFF4CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AFB8427C1A72A0E000DFF4CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AFB8427F1A72A0E000DFF4CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AFB842811A72A0E000DFF4CA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AFB842841A72A0E000DFF4CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		AFB8428A1A72A0E000DFF4CA /* 2MapsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 2MapsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFB8428F1A72A0E000DFF4CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFB842901A72A0E000DFF4CA /* _MapsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _MapsTests.swift; sourceTree = "<group>"; };
+		AFB8429A1A72A14E00DFF4CA /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		AFB8429C1A72A22600DFF4CA /* Buttons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
+		AFB8429E1A72A24100DFF4CA /* ButtonsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +78,8 @@
 				AFB842771A72A0E000DFF4CA /* 2Maps */,
 				AFB8428D1A72A0E000DFF4CA /* 2MapsTests */,
 				AFB842761A72A0E000DFF4CA /* Products */,
+				AF0773181A72B0F4001BEA5E /* javascript.html */,
+				AF0773201A72E468001BEA5E /* edited.txt */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,7 +96,13 @@
 			isa = PBXGroup;
 			children = (
 				AFB8427A1A72A0E000DFF4CA /* AppDelegate.swift */,
-				AFB8427C1A72A0E000DFF4CA /* ViewController.swift */,
+				AFB8429A1A72A14E00DFF4CA /* MainController.swift */,
+				AFB8429E1A72A24100DFF4CA /* ButtonsController.swift */,
+				AFB8429C1A72A22600DFF4CA /* Buttons.swift */,
+				AF0773121A72AD31001BEA5E /* GoogleController.swift */,
+				AF07731A1A72B41C001BEA5E /* WebView.swift */,
+				AF0773141A72AD50001BEA5E /* MapController.swift */,
+				AF07731E1A72DC4B001BEA5E /* Pin.swift */,
 				AFB8427E1A72A0E000DFF4CA /* Main.storyboard */,
 				AFB842811A72A0E000DFF4CA /* Images.xcassets */,
 				AFB842831A72A0E000DFF4CA /* LaunchScreen.xib */,
@@ -193,8 +217,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFB842801A72A0E000DFF4CA /* Main.storyboard in Resources */,
+				AF0773191A72B0F4001BEA5E /* javascript.html in Resources */,
 				AFB842851A72A0E000DFF4CA /* LaunchScreen.xib in Resources */,
 				AFB842821A72A0E000DFF4CA /* Images.xcassets in Resources */,
+				AF0773211A72E468001BEA5E /* edited.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,8 +238,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFB8427D1A72A0E000DFF4CA /* ViewController.swift in Sources */,
+				AF07731B1A72B41C001BEA5E /* WebView.swift in Sources */,
+				AFB8429D1A72A22600DFF4CA /* Buttons.swift in Sources */,
+				AFB8429F1A72A24100DFF4CA /* ButtonsController.swift in Sources */,
+				AF07731F1A72DC4B001BEA5E /* Pin.swift in Sources */,
+				AFB8429B1A72A14E00DFF4CA /* MainController.swift in Sources */,
 				AFB8427B1A72A0E000DFF4CA /* AppDelegate.swift in Sources */,
+				AF0773151A72AD50001BEA5E /* MapController.swift in Sources */,
+				AF0773131A72AD31001BEA5E /* GoogleController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +437,7 @@
 				AFB842961A72A0E000DFF4CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AFB842971A72A0E000DFF4CA /* Build configuration list for PBXNativeTarget "2MapsTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +446,7 @@
 				AFB842991A72A0E000DFF4CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

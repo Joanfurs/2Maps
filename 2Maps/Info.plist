@@ -36,5 +36,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This app needs Core Location for demonstration purposes.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>This app needs Core Location for demonstration purposes.</string>
 </dict>
 </plist>
