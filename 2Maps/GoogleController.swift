@@ -13,20 +13,24 @@ class GoogleController:  UIViewController, UIWebViewDelegate, CLLocationManagerD
 
 
 	let locationManager: CLLocationManager = CLLocationManager(); //find device's latitude and longitude
-	var lat: Double
-	var lon: Double
+	var lat: Double = 0;
+	var lon: Double = 0;
+	var pageLoadedReady: Bool = false;
+	var haveLocationReady: Bool = false;
+	var first: Bool = true;
 
 	init(title: String) {
-	println("google init")
-	self.lat = 40.7332571503154
-	self.lon = -73.9751828928236
+		println("google init")
 		super.init(nibName: nil, bundle: nil);
+		//lat = 40.7332571503154
+		//lon = -73.9751828928236
+		
 		self.title = title;	//self.title is the property, title is the parameter
 	}
 	
 	required init(coder aDecoder: NSCoder) {
-	self.lat = 40.7332571503154
-	self.lon = -73.9751828928236
+		//lat = 40.7332571503154
+		//lon = -73.9751828928236
 		super.init(coder: aDecoder);
 	}
 	
@@ -72,6 +76,7 @@ class GoogleController:  UIViewController, UIWebViewDelegate, CLLocationManagerD
 	
 	func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
 		manager.stopUpdatingLocation();	//save electricity
+		haveLocationReady = true;
 		
 		//last location in the array of locations
 		let location: CLLocation = locations[locations.count - 1] as CLLocation;
@@ -80,8 +85,8 @@ class GoogleController:  UIViewController, UIWebViewDelegate, CLLocationManagerD
 		//let lat = "\(location.coordinate.latitude)"
 		//let lon = "\(location.coordinate.longitude)"
 		
-		let lat = location.coordinate.latitude
-		let lon = location.coordinate.longitude
+		lat = location.coordinate.latitude
+		lon = location.coordinate.longitude
 	}
 
 	func locationManager(manager: CLLocationManager!,
@@ -90,6 +95,7 @@ class GoogleController:  UIViewController, UIWebViewDelegate, CLLocationManagerD
 	}
 	
 	func webViewDidFinishLoad(webView: UIWebView) {
+		pageLoadedReady = true;
 
 		let javascript: String = String(format: "showmap(%.15g, %.15g, %d);", lat, lon,
 			//163 William Street, New York, NY
@@ -100,6 +106,38 @@ class GoogleController:  UIViewController, UIWebViewDelegate, CLLocationManagerD
 		println("javaScript = \"\(javascript)\"");
 	
 		let retval: String? = webView.stringByEvaluatingJavaScriptFromString(javascript);
+		if retval == nil {
+			println("stringByEvaluatingJavaScriptFromString failed");
+		} else {
+			println("retval! = \(retval!)");
+			let n: Int? = retval!.toInt();
+			if n == nil {
+				println("retval! \(retval!) is not an Int");
+			} else {
+				println("n! = \(n!)");
+			}
+		}
+	}
+	
+	func f() {
+		if !pageLoadedReady || !haveLocationReady {
+			return;
+		}
+		
+		if !first {
+			return;
+		}
+		first = false;
+		
+		let javascript: String = String(format: "showmap(%.15g, %.15g, %d);", lat, lon,
+			//163 William Street, New York, NY
+			//40.7101843,    //latitude (north of equator is positive)
+			//-74.0061474,   //longitude (west of Greenwich is negative)
+			18);           //zoom level
+		
+		println("javaScript = \"\(javascript)\"");
+	
+		let retval: String? = (view as UIWebView).stringByEvaluatingJavaScriptFromString(javascript);
 		if retval == nil {
 			println("stringByEvaluatingJavaScriptFromString failed");
 		} else {
